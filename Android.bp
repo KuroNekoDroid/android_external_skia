@@ -124,6 +124,7 @@ cc_defaults {
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
         "-fvisibility=hidden",
+        "-O3",
     ],
 
     cppflags:[
@@ -1787,6 +1788,7 @@ cc_library_static {
         enabled: true,
         cflags: [
           "-Wno-unknown-pragmas",
+          "-O3",
         ],
         srcs: [
           "src/ports/SkDebug_win.cpp",
@@ -1898,6 +1900,7 @@ cc_defaults {
         "-Wno-implicit-fallthrough",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
+        "-O3",
     ],
     target: {
       windows: {
@@ -3210,6 +3213,7 @@ cc_library_shared {
         "-fvisibility=hidden",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
+        "-O3",
     ],
 
     cppflags:[
