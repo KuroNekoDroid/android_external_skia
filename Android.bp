@@ -125,6 +125,11 @@ cc_defaults {
         "-Wno-unused-variable",
         "-fvisibility=hidden",
         "-O3",
+        "-fdata-sections",
+        "-function-sections",
+        "-finline-functions",
+        "-ftree-vectorize",
+        "-funroll-loops",
     ],
 
     cppflags:[
