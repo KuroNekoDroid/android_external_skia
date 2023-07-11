@@ -124,7 +124,6 @@ cc_defaults {
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
         "-fvisibility=hidden",
-        "-O3",
         "-fdata-sections",
         "-ffunction-sections",
         "-finline-functions",
@@ -1792,8 +1791,12 @@ cc_library_static {
       windows: {
         enabled: true,
         cflags: [
-          "-Wno-unknown-pragmas",
-          "-Ofast",
+        "-Wno-unknown-pragmas",
+        "-fdata-sections",
+        "-ffunction-sections",
+        "-finline-functions",
+        "-ftree-vectorize",
+        "-funroll-loops",
         ],
         srcs: [
           "src/ports/SkDebug_win.cpp",
@@ -1905,7 +1908,11 @@ cc_defaults {
         "-Wno-implicit-fallthrough",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
-        "-Ofast",
+        "-fdata-sections",
+        "-ffunction-sections",
+        "-finline-functions",
+        "-ftree-vectorize",
+        "-funroll-loops",
     ],
     target: {
       windows: {
@@ -3218,7 +3225,11 @@ cc_library_shared {
         "-fvisibility=hidden",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
-        "-Ofast",
+        "-fdata-sections",
+        "-ffunction-sections",
+        "-finline-functions",
+        "-ftree-vectorize",
+        "-funroll-loops",
     ],
 
     cppflags:[
